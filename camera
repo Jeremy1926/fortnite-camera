@@ -2,7 +2,7 @@ New Camera 20.06.2023
 
 DecryptionOfCamera Viewpoint_W2S()
 {
-DecryptionOfCamera CameraViewPoint = ctx->read_physical_memory<DecryptionOfCamera>(DriverVar::module + 0xE99FEA0); //14F0E8BD0
+DecryptionOfCamera CameraViewPoint = ctx->read_physical_memory<DecryptionOfCamera>(DriverVar::module + 0xE99FEA0); 
         char v1; // r8
         BYTE* v2 = (BYTE*)&CameraViewPoint;
         int i; // edx
