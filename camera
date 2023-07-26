@@ -1,8 +1,8 @@
-New Camera 20.06.2023
+New Camera 26.07.2023
 
 DecryptionOfCamera Viewpoint_W2S()
 {
-DecryptionOfCamera CameraViewPoint = ctx->read_physical_memory<DecryptionOfCamera>(DriverVar::module + 0xE99FEA0); 
+DecryptionOfCamera CameraViewPoint = ctx->read_physical_memory<DecryptionOfCamera>(base_address + 0xED57310); 
         char v1; // r8
         BYTE* v2 = (BYTE*)&CameraViewPoint;
         int i; // edx
@@ -18,28 +18,4 @@ DecryptionOfCamera CameraViewPoint = ctx->read_physical_memory<DecryptionOfCamer
         }
         return CameraViewPoint;
     
-} 
-            char* v2; // rdi
-            int v4; // ebx
-            __int16 result; // ax
-            int v6; // edx
-            int v7; // ecx
-            int v8; // eax
-            unsigned int v9; // ecx
-
-            v2 = buffer;
-            v4 = Lenght; 
-            result = ctx->read_physical_memory<int>(DriverVar::module + 0xEA3FC38);
-            v6 = 0;
-            v7 = 28;
-            if (v4)
-            {
-                do
-                {
-                    v8 = v6++;
-                    v9 = (v8 | 0xB000) + v7;
-                    result = v9 ^ ~*v2;
-                    v7 = v9 >> 2;
-                    *v2++ = result;
-                } while (v6 < v4);
-            }
+}
